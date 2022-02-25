@@ -1,0 +1,216 @@
+ /* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    max-width: 375px;
+    background-image: linear-gradient(135 deg, hsl(0, 0%, 100%)
+    hsl(0, 100%, 98%));
+}
+
+.logo {
+    width: 45%;
+    padding: 2rem;
+}
+
+.model {
+    width: 110%;
+    height: 15rem;
+}
+
+.model-desktop {
+    display: none;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-size: 3rem;
+    
+}
+
+.were {
+    color: hsl(0, 36%, 70%);
+    font-size: 3rem;
+    
+}
+
+p {
+    text-align: center;
+    color: hsl(0, 36%, 70%);
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+}
+
+
+form {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border-radius: 50px;
+    left: 1rem;
+    top: 0;
+    border: 1px solid hsl(0, 36%, 70%);
+    padding-left: 30px;
+}
+
+button {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    right: 0rem;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    background-color: hsl(0, 36%, 70%);
+    background-image: linear-gradient(135deg,  hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    box-shadow: 0px 0px 20px 1px hsl(0, 36%, 70%) ;
+}
+
+.error-icon {
+    display: inline-block;
+    position: absolute;
+    left: 70%;
+    top: 25%;
+    display: none;
+}
+
+.error-text {
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+
+.error .error-text {
+    display: block;
+}
+
+.error .error-icon {
+    display: block;
+}
+
+.error input{
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+
+@media screen and (min-width: 968px) {
+
+    header {
+        position: absolute;
+        width: 50%;
+        margin-left: 5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+
+    .container .left {
+        justify-content: center;
+        align-items: center ;
+        padding-top: 15rem;
+    }
+
+    .model {
+        display: none;
+    }
+
+    .model-desktop {
+        display: flex;
+        position: absolute;
+        width: 50%;
+        right: -2rem;
+    }
+  
+}
+
+
+@media screen and (min-width: 1245px) {
+    header {
+        position: absolute;
+        width: 50%;
+        margin-left: 5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+
+   .left {
+       position: absolute;
+       width: min-content;
+   }
+        
+
+    .model {
+        display: none;
+    }
+
+    .model-desktop {
+        display: flex;
+        position: absolute;
+        width: 50%;
+        right: -2rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        right: -20px;
+    }
+
+}
+
